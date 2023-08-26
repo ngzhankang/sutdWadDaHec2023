@@ -2,11 +2,7 @@
   "dependencies": {
     "tailwindcss": "^3.3.3"
   },
-  "scripts": {
-    "rebuild": "npx tailwindcss -i ./frontend/static/src/input.css -o ./frontend/static/css/main.css --watch",
-    "test": "python frontend/app.py",
-    "dev": "concurrently --kill-others \"npm run rebuild\" \"npm run test\""
-  },
+  
   "devDependencies": {
     "concurrently": "^8.2.1"
   },
