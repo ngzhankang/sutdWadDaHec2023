@@ -40,21 +40,6 @@ export default function TutorUpdatePage() {
             </Helmet>
             
             <StyledRoot>
-<<<<<<< HEAD
-                <Stack spacing={3}>
-                    <TextField name="email" label="Email address" />
-                </Stack>
-
-                <Stack spacing={3}>
-                    <TextField name="description" label="Session Description" />
-                </Stack>
-
-                <Stack spacing={3}>
-                    <TextField name="hours" label="Number Of Hours" />
-                </Stack>
-
-=======
->>>>>>> 2e3d942820fa753d1a406b46af89300446148c03
                 {mdUp && (
                     <StyledContent>
                         <Typography variant="h2" sx={{ px: 4, mt: 2, mb: 5, mr: 5}}>
