@@ -1,13 +1,10 @@
-from flask import Flask
-
-import joblib
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
-model = joblib.load("../model.sav")
 
 # Run "flask run --debug" to start server at port 5000
 
-@app.route("/")
+@app.route("/api/tutees")
 def home():
     return "Hello, world!"
 
@@ -24,6 +21,3 @@ def modelPredict():
     d = model.predict(input_text)
     print(d)
     return "asdf"
-
-if __name__ == "__main__":
-    app.run(debug=True)
