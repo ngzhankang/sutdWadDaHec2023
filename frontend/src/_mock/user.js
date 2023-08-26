@@ -10,7 +10,7 @@ const users = [...Array(24)].map((_, index) => ({
   company: faker.name.fullName(),
   isVerified: faker.datatype.boolean(),
   status: Math.floor(Math.random() * 10).toString(),
-  role: sample(['P', 'S']).concat("", Math.floor(Math.random() * 4).toString(), " ", sample(['Math', 'Eng', 'Sci']))
+  role: sample(['P', 'S']).concat("", Math.floor(Math.random() * 4 + 1).toString(), " ", sample(['Math', 'Eng', 'Sci']))
 }));
 
 export default users;
