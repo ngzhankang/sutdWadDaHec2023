@@ -18,7 +18,7 @@ CREATE TABLE `Tutee` (
   `weakness` VARCHAR(255)
 );
 
-CREATE TABLE `Mentor` (
+CREATE TABLE `Tutor` (
   `user_id` INT PRIMARY KEY,
   `end_date` DATETIME
 );
@@ -26,7 +26,7 @@ CREATE TABLE `Mentor` (
 CREATE TABLE `Session` (
   `session_id` INT,
   `tutee` INT,
-  `mentor` INT,
+  `tutor` INT,
   `date` DATETIME,
   `hours` INT,
   `description` VARCHAR(2000)
@@ -34,8 +34,8 @@ CREATE TABLE `Session` (
 
 ALTER TABLE `Tutee` ADD FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
 
-ALTER TABLE `Mentor` ADD FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
+ALTER TABLE `Tutor` ADD FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
 
 ALTER TABLE `Session` ADD FOREIGN KEY (`tutee`) REFERENCES `User` (`id`);
 
-ALTER TABLE `Session` ADD FOREIGN KEY (`mentor`) REFERENCES `User` (`id`);
+ALTER TABLE `Session` ADD FOREIGN KEY (`tutor`) REFERENCES `User` (`id`);
