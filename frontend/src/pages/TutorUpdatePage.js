@@ -15,7 +15,8 @@ const StyledRoot = styled('div')(({ theme }) => ({
       display: 'flex',
       alignItems: 'center',
       marginRight: 60,
-      gap: 20
+      gap: 20,
+      flexDirection: 'column'
     },
   }));
 
@@ -47,19 +48,29 @@ export default function TutorUpdatePage() {
                         </Typography>
                     </StyledContent>
                 )}
-                <Stack spacing={3}>
-                    <TextField name="date" label="Date of session" />
-                </Stack>
+                <form>
+                    <Stack spacing={3}>
+                        <TextField name="tutor" label="Tutor name" />
+                    </Stack>
 
-                <Stack spacing={3}>
-                    <TextField name="hours" label="Number of hours" />
-                </Stack>
+                    <Stack spacing={3}>
+                        <TextField name="tutee" label="Tutee name" />
+                    </Stack>
 
-                <Stack spacing={3}>
-                    <TextField name="description" label="Session description" />
-                </Stack>
-                
-                <Button type='submit' variant='contained'>Submit</Button>
+                    <Stack spacing={3}>
+                        <TextField name="date" label="Date of session" />
+                    </Stack>
+
+                    <Stack spacing={3}>
+                        <TextField name="hours" label="Number of hours" />
+                    </Stack>
+
+                    <Stack spacing={3}>
+                        <TextField name="description" label="Session description" />
+                    </Stack>
+                    
+                    <Button type='submit' variant='contained'>Submit</Button>
+                </form>
 {/* 
             <Container maxWidth="sm">
                 <StyledContent>
