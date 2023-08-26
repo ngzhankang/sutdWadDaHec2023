@@ -38,10 +38,11 @@ import USERLIST from '../_mock/user';
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'name', label: 'Name', alignRight: false },
-  { id: 'company', label: 'Company', alignRight: false },
-  { id: 'role', label: 'Role', alignRight: false },
-  { id: 'isVerified', label: 'Verified', alignRight: false },
+  { id: 'tutee', label: 'Tutee', alignRight: false },
+  { id: 'tutor', label: 'Tutor', alignRight: false },
+  { id: 'level', label: 'Level', alignRight: false },
+  { id: 'organisation', label: 'Organisation', alignRight: false },
+  { id: 'sessionNo', label: 'Number Of Sessions', alignRight: false},
   { id: 'status', label: 'Status', alignRight: false },
   { id: '' },
 ];

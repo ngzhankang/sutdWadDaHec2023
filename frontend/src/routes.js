@@ -5,11 +5,20 @@ import SimpleLayout from './layouts/simple';
 //
 import Page404 from './pages/Page404';
 import DashboardAppPage from './pages/DashboardAppPage';
+import TutorUpdatePage from './pages/TutorUpdatePage';
 
 // ----------------------------------------------------------------------
 
 export default function Router() {
   const routes = useRoutes([
+    {
+      path: '/login',
+      element: <TutorUpdatePage />,
+      children: [
+        { element: <Navigate to="dashboard/app" />, index: true },
+        { path: 'app', element: <TutorUpdatePage /> }
+      ],
+    },
     {
       path: '/dashboard',
       element: <DashboardLayout />,
