@@ -14,15 +14,15 @@ const StyledRoot = styled('div')(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
       display: 'flex',
       alignItems: 'center',
-      gap: 20,
-      flexDirection: 'column'
+      marginRight: 60,
+      gap: 20
     },
   }));
 
 const StyledContent = styled('div')(({ theme }) => ({
-    maxWidth: 600,
+    maxWidth: 480,
     margin: 'auto',
-    minHeight: '30vh',
+    minHeight: '100vh',
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
@@ -47,29 +47,19 @@ export default function TutorUpdatePage() {
                         </Typography>
                     </StyledContent>
                 )}
-                <form>
-                    <Stack spacing={3}>
-                        <TextField name="tutor" label="Tutor name" />
-                    </Stack>
+                <Stack spacing={3}>
+                    <TextField name="date" label="Date of session" />
+                </Stack>
 
-                    <Stack spacing={3}>
-                        <TextField name="tutee" label="Tutee name" />
-                    </Stack>
+                <Stack spacing={3}>
+                    <TextField name="hours" label="Number of hours" />
+                </Stack>
 
-                    <Stack spacing={3}>
-                        <TextField name="date" label="Date of session" />
-                    </Stack>
-
-                    <Stack spacing={3}>
-                        <TextField name="hours" label="Number of hours" />
-                    </Stack>
-
-                    <Stack spacing={3}>
-                        <TextField name="description" label="Session description" />
-                    </Stack>
-                    
-                    <Button type='submit' variant='contained'>Submit</Button>
-                </form>
+                <Stack spacing={3}>
+                    <TextField name="description" label="Session description" />
+                </Stack>
+                
+                <Button type='submit' variant='contained'>Submit</Button>
 {/* 
             <Container maxWidth="sm">
                 <StyledContent>
