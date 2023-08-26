@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // @mui
 import {
+  Box,
   Card,
   Table,
   Stack,
@@ -14,7 +15,9 @@ import {
   Popover,
   Checkbox,
   TableRow,
+  TextField,
   MenuItem,
+  Modal,
   TableBody,
   TableCell,
   Container,
@@ -93,6 +96,8 @@ export default function DashboardAppPage() {
 
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
+  const [modalOpen, setModalOpen] = useState(false)
+
   const navigate = useNavigate()
 
 
@@ -152,14 +157,59 @@ export default function DashboardAppPage() {
     setFilterName(event.target.value);
   };
 
+  const handleNewUser = () => {
+    setModalOpen(true)
+
+  }
+
+  const handleCloseModal = () => setModalOpen(false)
+
   const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - USERLIST.length) : 0;
 
   const filteredUsers = applySortFilter(USERLIST, getComparator(order, orderBy), filterName);
 
   const isNotFound = !filteredUsers.length && !!filterName;
 
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+
   return (
     <>
+      <div>
+      <Modal
+        open={modalOpen}
+        onClose={handleCloseModal}
+        aria-labelledby ="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Add new tutee
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <form>
+              <div>
+              <TextField name="tutee" label="Tutee name" />
+              <TextField name="tutor" label="Tutor name" />
+              <TextField name="level" label="Level and subject" />
+              <TextField name="organisation" label="Partner organisation" />
+              </div>
+              <Button type='submit' variant='contained'>Create new</Button>
+            </form>
+          </Typography>
+        </Box>
+      </Modal>
+    </div>
+
       <Helmet>
         <title> Dashboard </title>
       </Helmet>
@@ -169,8 +219,8 @@ export default function DashboardAppPage() {
           <Typography variant="h4" sx={{ mb: 5 }}>
             Hi, Welcome back
           </Typography>
-          <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
-            New User
+          <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />} onClick={handleNewUser}>
+            New Tutee
           </Button>
         </Stack>
 
