@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { filter } from 'lodash';
 import { sentenceCase } from 'change-case';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // @mui
 import {
   Card,
@@ -42,8 +43,7 @@ const TABLE_HEAD = [
   { id: 'tutor', label: 'Tutor', alignRight: false },
   { id: 'level', label: 'Level', alignRight: false },
   { id: 'organisation', label: 'Organisation', alignRight: false },
-  { id: 'sessionNo', label: 'Number Of Sessions', alignRight: false},
-  { id: 'status', label: 'Status', alignRight: false },
+  { id: 'sessionNo', label: 'Number Of Sessions', alignRight: false },
   { id: '' },
 ];
 
@@ -92,6 +92,13 @@ export default function DashboardAppPage() {
   const [filterName, setFilterName] = useState('');
 
   const [rowsPerPage, setRowsPerPage] = useState(5);
+
+  const navigate = useNavigate()
+
+
+  const handleViewMore = (id) => {
+    navigate(`/dashboard/user/${id}`)
+  }
 
   const handleOpenMenu = (event) => {
     setOpen(event.currentTarget);
@@ -154,20 +161,20 @@ export default function DashboardAppPage() {
   return (
     <>
       <Helmet>
-        <title> Dashboard | Minimal UI </title>
+        <title> Dashboard </title>
       </Helmet>
 
       <Container maxWidth="xl">
-      <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
-        <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, Welcome back
-        </Typography>
-        <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
-          New User
-        </Button>
-      </Stack>
-        
-      <Card>
+        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
+          <Typography variant="h4" sx={{ mb: 5 }}>
+            Hi, Welcome back
+          </Typography>
+          <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
+            New User
+          </Button>
+        </Stack>
+
+        <Card>
           <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} />
 
           <Scrollbar>
@@ -213,6 +220,7 @@ export default function DashboardAppPage() {
                         </TableCell>
 
                         <TableCell align="right">
+                          <Button variant="outlined" onClick={() => handleViewMore(id)}>More</Button>
                           <IconButton size="large" color="inherit" onClick={handleOpenMenu}>
                             <Iconify icon={'eva:more-vertical-fill'} />
                           </IconButton>

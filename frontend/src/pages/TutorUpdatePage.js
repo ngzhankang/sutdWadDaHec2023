@@ -16,16 +16,6 @@ const StyledRoot = styled('div')(({ theme }) => ({
     },
   }));
 
-const StyledSection = styled('div')(({ theme }) => ({
-    width: '100%',
-    maxWidth: 480,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    boxShadow: theme.customShadows.card,
-    backgroundColor: theme.palette.background.default,
-}));
-
 const StyledContent = styled('div')(({ theme }) => ({
     maxWidth: 480,
     margin: 'auto',
@@ -43,7 +33,7 @@ export default function TutorUpdatePage() {
     return (
         <>
             <Helmet>
-                <title> Login </title>
+                <title> Update tutor </title>
             </Helmet>
             
             <StyledRoot>
@@ -52,7 +42,7 @@ export default function TutorUpdatePage() {
                 </Stack>
 
                 <Stack spacing={3}>
-                    <TextField name="description" label="Sessiion Description" />
+                    <TextField name="description" label="Session Description" />
                 </Stack>
 
                 <Stack spacing={3}>
