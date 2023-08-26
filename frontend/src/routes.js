@@ -21,14 +21,6 @@ export default function Router() {
       ],
     },
     {
-      path: '/tutorUpdate',
-      element: <TutorView />,
-      children: [
-        { element: <Navigate to="dashboard/app" />, index: true },
-        { path: 'app', element: <TutorViewPage /> }
-      ],
-    },
-    {
       path: '/dashboard',
       element: <DashboardLayout />,
       children: [
