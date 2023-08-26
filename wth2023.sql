@@ -5,7 +5,7 @@ CREATE TABLE WTH2023
     tutor_contact INT(8),
     tutee_contact INT(8),
     dob DATETIME,
-    gender VARCHAR(10),
+    gender enum("Male","Female","Others"),
     house_tel INT(8),
     email VARCHAR (100),
     tutor_desc VARCHAR (255),
