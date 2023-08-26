@@ -14,16 +14,15 @@ const StyledRoot = styled('div')(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
       display: 'flex',
       alignItems: 'center',
-      marginRight: 60,
       gap: 20,
       flexDirection: 'column'
     },
   }));
 
 const StyledContent = styled('div')(({ theme }) => ({
-    maxWidth: 480,
+    maxWidth: 600,
     margin: 'auto',
-    minHeight: '100vh',
+    minHeight: '30vh',
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
