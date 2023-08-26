@@ -13,18 +13,11 @@ import Iconify from '../components/iconify';
 const StyledRoot = styled('div')(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
       display: 'flex',
+      alignItems: 'center',
+      marginRight: 60,
+      gap: 20
     },
   }));
-
-const StyledSection = styled('div')(({ theme }) => ({
-    width: '100%',
-    maxWidth: 480,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    boxShadow: theme.customShadows.card,
-    backgroundColor: theme.palette.background.default,
-}));
 
 const StyledContent = styled('div')(({ theme }) => ({
     maxWidth: 480,
@@ -43,29 +36,30 @@ export default function TutorUpdatePage() {
     return (
         <>
             <Helmet>
-                <title> Login </title>
+                <title> Update tutor </title>
             </Helmet>
             
             <StyledRoot>
-                <Stack spacing={3}>
-                    <TextField name="email" label="Email address" />
-                </Stack>
-
-                <Stack spacing={3}>
-                    <TextField name="description" label="Sessiion Description" />
-                </Stack>
-
-                <Stack spacing={3}>
-                    <TextField name="hours" label="Number Of Hours" />
-                </Stack>
-
                 {mdUp && (
                     <StyledContent>
                         <Typography variant="h2" sx={{ px: 4, mt: 2, mb: 5, mr: 5}}>
-                        Hi, Welcome Back
+                        Tutor Update Form
                         </Typography>
                     </StyledContent>
                 )}
+                <Stack spacing={3}>
+                    <TextField name="date" label="Date of session" />
+                </Stack>
+
+                <Stack spacing={3}>
+                    <TextField name="hours" label="Number of hours" />
+                </Stack>
+
+                <Stack spacing={3}>
+                    <TextField name="description" label="Session description" />
+                </Stack>
+                
+                <Button type='submit' variant='contained'>Submit</Button>
 {/* 
             <Container maxWidth="sm">
                 <StyledContent>

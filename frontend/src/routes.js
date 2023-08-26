@@ -6,6 +6,7 @@ import SimpleLayout from './layouts/simple';
 import Page404 from './pages/Page404';
 import DashboardAppPage from './pages/DashboardAppPage';
 import TutorUpdatePage from './pages/TutorUpdatePage';
+import UserInfoPage from './pages/UserInfoPage';
 
 // ----------------------------------------------------------------------
 
@@ -32,7 +33,8 @@ export default function Router() {
       element: <DashboardLayout />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
-        { path: 'app', element: <DashboardAppPage /> }
+        { path: 'app', element: <DashboardAppPage /> },
+        { path: 'user/:id', element: <UserInfoPage /> }
       ],
     },
     {
