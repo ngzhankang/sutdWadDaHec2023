@@ -9,8 +9,6 @@ CREATE TABLE WTH2023
     house_tel INT(8),
     email VARCHAR (100),
     tutor_desc VARCHAR (255),
-    strength_tutor VARCHAR (255),
-    weakness_tutor VARCHAR (255),
     strength_tutee VARCHAR (255),
     weakness_tutee VARCHAR (255),
     tutor_end_date DATETIME, 
