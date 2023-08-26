@@ -1,14 +1,13 @@
-CREATE TABLE WTH2023
+CREATE TABLEm
 (
     id INT PRIMARY KEY,
     name VARCHAR (200),
-    tutor_contact INT(8),
     tutee_contact INT(8),
     dob DATETIME,
-    gender enum("Male","Female","Others"),
+    gender enum("Male", "Female", "Others"),
     house_tel INT(8),
     email VARCHAR (100),
-    tutor_desc VARCHAR (255),
+    tutee_desc VARCHAR (255),
     strength_tutee VARCHAR (255),
     weakness_tutee VARCHAR (255),
     tutor_end_date DATETIME, 
