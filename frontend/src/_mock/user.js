@@ -1,11 +1,31 @@
 import { faker } from '@faker-js/faker';
 import { sample } from 'lodash';
-import tutees from '../data/tutee'
-import tutors from '../data/tutor'
+import data from '../data/data.json'
 
 // ----------------------------------------------------------------------
+const tutees = data.tutees
 
+console.log(tutees)
 
+const users = tutees.map((tutee, index) => ({
+  id: faker.datatype.uuid(),
+  name: tutee.name,
+  avatarUrl: `/assets/images/avatars/avatar_${index + 1}.jpg`,
+  tutor: tutee.tutorName,
+  noOfSessions: tutee.noOfSessions,
+  levelSubject: tutee.levelSubject,
+  organisation: tutee.organisation,
+  location: tutee.location,
+  strength: tutee.strength,
+  weakness: tutee.weakness,
+  tutorEmail: tutee.tutorEmail,
+  tutorPhone: tutee.tutorPhone,
+  tutorEndDate: tutee.tutorEndDate,
+  sessionDate: tutee.sessionDate,
+  sessionDescrip: tutee.sessionDescrip
+}))
+
+console.log(users)
 
 /*
 const users = [...Array(24)].map((_, index) => ({

@@ -13,11 +13,12 @@
             "tutorEndDate": "1/1/2023",
             "sessionDate": "27/8/2023",
             "hours": 5,
+            "noOfSessions": 8,
             "sessionDescrip": "French vocabulary is expanding beautifully for my tutee. Their genuine excitement to learn new words and their effort in integrating them into sentences showcases their genuine passion for language."
         },
         {
             "name": "Peter Tan",
-            "levelSubject": "Sec2 Maths",
+            "levelSubject": "S2 Maths",
             "organisation": "Gek Poh Ville CC",
             "location": "Jurong West",
             "strength": "Peter excels in mathematics, demonstrating an impressive proficiency with a rating of 8 on a scale of 1 to 10. His strong math skills reflect his ability to grasp complex concepts and solve challenging problems effectively.",
@@ -28,6 +29,7 @@
             "tutorEndDate": "2/1/2023",
             "sessionDate": "15/7/2023",
             "hours": 3,
+            "noOfSessions": 4,
             "sessionDescrip": "Engaging in another physics problem-solving session was a true pleasure. My tutee's persistence and effort in tackling complex problems were evident throughout. Their willingness to embrace challenges head-on speaks volumes about their commitment to growth."
         },
         {
@@ -43,6 +45,7 @@
             "tutorEndDate": "3/1/2023",
             "sessionDate": "13/3/2023",
             "hours": "2",
+            "noOfSessions": 3,
             "sessionDescrip": "Coding is a newfound passion for my tutee, and it's evident in their vibrant participation during our session. Their eagerness to learn and their creative problem-solving skills make each session exciting."
         }
     ]
