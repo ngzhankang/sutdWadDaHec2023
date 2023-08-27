@@ -4,7 +4,7 @@ CREATE TABLE `User` (
   `contact` INT(8),
   `house_tel` INT(8),
   `gender` ENUM ('Male', 'Female', 'Others'),
-  `email` VARCHAR(320),
+  `email` VARCHAR(255),
   `description` VARCHAR(255),
   `amt_discussion` int(255)
 );
