@@ -25,7 +25,10 @@ const users = tutees.map((tutee, index) => ({
   sessionDescrip: tutee.sessionDescrip
 }))
 
-console.log(users)
+
+
+// console.log("users: ", users)
+console.log("id test:", users[0].id)
 
 /*
 const users = [...Array(24)].map((_, index) => ({
