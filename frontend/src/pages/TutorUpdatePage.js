@@ -33,6 +33,21 @@ const StyledContent = styled('div')(({ theme }) => ({
 
 export default function TutorUpdatePage() {
     const mdUp = useResponsive('up', 'md');
+    const handleUpdate = (e) => {
+        e.preventDefault()
+        const formData = new FormData(e.target);
+        const formDataObject = {};
+
+        formData.forEach((value, key) => {
+            formDataObject[key] = value;
+        });
+
+        console.log(formDataObject);
+
+        users.find(user => {
+            user.name === formDataObject.tutee
+        })
+    }
     return (
         <>
             <Helmet>
@@ -47,25 +62,25 @@ export default function TutorUpdatePage() {
                         </Typography>
                     </StyledContent>
                 )}
-                <form>
+                <form onSubmit={handleUpdate}>
                     <Stack spacing={3}>
-                        <TextField name="tutor" label="Tutor name" />
+                        <TextField required name="tutor" label="Tutor name" />
                     </Stack>
 
                     <Stack spacing={3}>
-                        <TextField name="tutee" label="Tutee name" />
+                        <TextField required name="tutee" label="Tutee name" />
                     </Stack>
 
                     <Stack spacing={3}>
-                        <TextField name="date" label="Date of session" />
+                        <TextField required name="date" label="Date of session" />
                     </Stack>
 
                     <Stack spacing={3}>
-                        <TextField name="hours" label="Number of hours" />
+                        <TextField required name="hours" label="Number of hours" />
                     </Stack>
 
                     <Stack spacing={3}>
-                        <TextField name="description" label="Session description" />
+                        <TextField required name="description" label="Session description" />
                     </Stack>
                     
                     <Button type='submit' variant='contained'>Submit</Button>
