@@ -57,9 +57,7 @@ export default function TutorUpdatePage() {
             if (user.name === formDataObject.tutee) {
                 return newTutee
             }
-            else {
-                return user
-            }
+            return user;
         })
         console.log('after', users)
     }
