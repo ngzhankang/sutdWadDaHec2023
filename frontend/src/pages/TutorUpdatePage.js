@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 // @mui
 import { styled } from '@mui/material/styles';
 import { Link, Container, Typography, TextField, Divider, Stack, Button } from '@mui/material';
+import users from '../_mock/user';
 // hooks
 import useResponsive from '../hooks/useResponsive';
 // components
@@ -42,11 +43,25 @@ export default function TutorUpdatePage() {
             formDataObject[key] = value;
         });
 
-        console.log(formDataObject);
 
-        users.find(user => {
-            user.name === formDataObject.tutee
+        console.log('before', users);
+
+        const matchedTutee = users.find(user => user.name === formDataObject.tutee)
+        const newTutee = {
+            ...matchedTutee,
+            noOfSessions: matchedTutee.noOfSessions + 1,
+            sessionDescrip: matchedTutee.sessionDescrip.concat(formDataObject.description)
+        }
+        console.log(newTutee.noOfSessions)
+        users.map(user => {
+            if (user.name === formDataObject.tutee) {
+                return newTutee
+            }
+            else {
+                return user
+            }
         })
+        console.log('after', users)
     }
     return (
         <>
