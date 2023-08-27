@@ -13,8 +13,8 @@
             "tutorEndDate": "1/1/2023",
             "sessionDate": "27/8/2023",
             "hours": 5,
-            "noOfSessions": 8,
-            "sessionDescrip": "French vocabulary is expanding beautifully for my tutee. Their genuine excitement to learn new words and their effort in integrating them into sentences showcases their genuine passion for language."
+            "noOfSessions": 1,
+            "sessionDescrip": ["French vocabulary is expanding beautifully for my tutee. Their genuine excitement to learn new words and their effort in integrating them into sentences showcases their genuine passion for language."]
         },
         {
             "name": "Peter Tan",
@@ -29,8 +29,8 @@
             "tutorEndDate": "2/1/2023",
             "sessionDate": "15/7/2023",
             "hours": 3,
-            "noOfSessions": 4,
-            "sessionDescrip": "Engaging in another physics problem-solving session was a true pleasure. My tutee's persistence and effort in tackling complex problems were evident throughout. Their willingness to embrace challenges head-on speaks volumes about their commitment to growth."
+            "noOfSessions": 1,
+            "sessionDescrip": ["Engaging in another physics problem-solving session was a true pleasure. My tutee's persistence and effort in tackling complex problems were evident throughout. Their willingness to embrace challenges head-on speaks volumes about their commitment to growth."]
         },
         {
             "name": "Mary Chua",
@@ -46,7 +46,7 @@
             "sessionDate": "13/3/2023",
             "hours": "2",
             "noOfSessions": 3,
-            "sessionDescrip": "Coding is a newfound passion for my tutee, and it's evident in their vibrant participation during our session. Their eagerness to learn and their creative problem-solving skills make each session exciting."
+            "sessionDescrip": ["Coding is a newfound passion for my tutee, and it's evident in their vibrant participation during our session. Their eagerness to learn and their creative problem-solving skills make each session exciting.", "Another inspiring tutoring session. My tutee's engagement with algebraic concepts bodes well for their upcoming PSLE, indicating solid groundwork.","Essay structuring skills are becoming second nature to my tutee, a vital asset as they prepare for the O levels. Their dedication is evident."]
         }
     ]
 }
